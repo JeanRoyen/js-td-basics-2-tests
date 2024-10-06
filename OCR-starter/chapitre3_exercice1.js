@@ -17,3 +17,40 @@
 // Exemple : si le jour actuel est "mardi", le programme devrait afficher "Demain, nous serons mercredi."
 
 // N'oubliez pas de tester votre programme avec divers jours de la semaine.
+
+const jourActuel = prompt("Entrez un jour de la semaine");
+let jourDemain;
+
+switch (jourActuel){
+    case "lundi":
+        jourDemain = "mardi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "mardi":
+        jourDemain = "mercredi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "mercredi":
+        jourDemain = "jeudi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "jeudi":
+        jourDemain = "vendredi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "vendredi":
+        jourDemain = "samedi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "samedi":
+        jourDemain = "dimanche";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    case "dimanche":
+        jourDemain = "lundi";
+        console.log("Demain nous serons " + jourDemain);
+        break;
+    default:
+        console.log("Jour non reconnu");
+}
+
