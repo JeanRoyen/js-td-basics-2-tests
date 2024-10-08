@@ -20,7 +20,6 @@ alors que l'équipe de Mike a marqué 116, 94 et 123 points.
 
 BONNE CHANCE 😀
 */
-
 // sans bonus
 
 // 1. Calculez le score moyen de chaque équipe.
@@ -28,6 +27,17 @@ BONNE CHANCE 😀
 //    et imprimez l'équipe gagnante dans la console avec son score moyen.
 // 3. Changez ensuite les scores pour montrer différents gagnants.
 //    N'oubliez pas de prendre en compte qu'il pourrait y avoir un ex æquo (le même score moyen).
+
+const johnMoyenne = (89 + 120 + 130)/3;
+const markMoyenne = (116 + 94 + 123)/3;
+
+if (johnMoyenne < markMoyenne) {
+    console.log("L'équipe de Mark gagne avec : " + markMoyenne + " points")
+} else if (johnMoyenne > markMoyenne){
+    console.log("L'équipe de John gagne avec : " + johnMoyenne + " points")
+} else {
+    console.log("Egalité");
+}
 
 // avec bonus
 

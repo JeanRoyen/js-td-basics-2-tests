@@ -26,3 +26,18 @@ Tester avec des montants d'achat de
 //       Assurez-vous que le montant versé aux restos du cœur ne dépasse pas 2€ (utilisez Math.min(2, montant versé)).
 //    b) Si la condition est fausse, la somme versée aux restos du cœur est de 0€.
 // 4. Affichez la somme versée aux restos du cœur dans la console.
+
+const totalAchat = prompt("Entrez la valeur de vos achats");
+const remise = totalAchat - (totalAchat*0.1)
+const restoDC = (totalAchat*0.01)
+
+if (totalAchat > 25) {
+    console.log(remise);
+} else {
+    console.log(totalAchat);
+}
+if ((totalAchat - remise) > 5){
+    console.log(restoDC + " euros");
+} else {
+    console.log("0 euros")
+}

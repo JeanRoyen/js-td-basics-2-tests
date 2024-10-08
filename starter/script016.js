@@ -107,7 +107,7 @@ switch (true){
 //    e) dans tous les autres cas (si la personne n'a rien répondu de tout ça
 //     — c.-à-d. qu'elle n'a entré aucun de ces qautre mots-là),
 //     affichez "Je n'ai pas compris !"
-
+/*
 const meteo = prompt("Quel temps fait-il dehors ? Répondez par un des quatre mots suivants : \nsoleil, vent, pluie ou neige.")
 
 switch (meteo) {
@@ -126,15 +126,30 @@ switch (meteo) {
     default:
         console.log("Je n'ai pas compris");
 }
-
+*/
 // b) Switch sans break
 // L'instruction `break` fait sortir du bloc du switch. On ne souhaite pas toujours sortir, dans ce cas, on peut ne pas mettre de `break`
 // 1. Demandez à l'utilisateur d'entrer le numéro du jour de la semaine
-// 2. Affichez ensuite dans la console le message suivant : "Les jours suivants se sont déjà écoulés depuis le début de la semaine : …, …, …"
+// 2. Affichez ensuite dans la console le message suivant : Les jours suivants se sont déjà écoulés depuis le début de la semaine : …, …, …" …, …, …"
 
 const weekDay = prompt("Entrez un jour de la semaine");
 
-
+switch (weekDay) {
+    case "dimanche":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine :");
+    case "samedi":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : samedi");
+    case "vendredi":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : vendredi");
+    case "jeudi":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : jeudi");
+    case "mercredi":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : mercredi");
+    case "mardi" :
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine : mardi");
+    case "lundi":
+        console.log("Les jours suivants se sont déjà écoulés depuis le début de la semaine :");
+}
 
 // Ici, toutes les instructions "console.log" entre la ligne case:… et l'instruction break seront exécutées, et on obtient donc une liste de jours. Notez bien qu'il faut quand même un break avant le default, sans quoi ce message d'erreur apparaîtra toujours à la fin de notre liste de jours… Notez qu'on aurait pu aussi écrire le default en premier, suivi d'un break puis la liste de tous les case.
 
