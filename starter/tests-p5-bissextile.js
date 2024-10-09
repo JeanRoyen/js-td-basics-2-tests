@@ -21,3 +21,11 @@ AUTREMENT DIT :
 
 N'oubliez pas de tester votre programme avec différentes années pour vérifier qu'il fonctionne correctement.
 */
+
+const year = 200;
+let isBissextile = false;
+
+if ((year%4 === 0 && year%100 !== 0) || year%400 === 0) {
+    isBissextile = true
+}
+console.log(isBissextile)

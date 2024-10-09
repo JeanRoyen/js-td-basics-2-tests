@@ -27,3 +27,50 @@ N'oubliez pas de tester votre programme avec diverses dates pour vous assurer qu
 
 Vous pouvez utiliser les exemples que vous avez fournis comme point de départ.
 */
+
+/*
+    1. Déclarer les variables de temps et demander une entrée utilisateur
+    1.1 Tester si l'entrée utilisateur est un nombre puis nombre positif
+    2. Initialiser une variable pour le maximum de jour par mois
+    3. Importer le programme pour bissextile depuis test-p5
+    4. Condition en fonction du mois sur maximum de jours
+    4.1 !!! Février !!!
+    5. Comparaison entre entrée utilisateur et maximum de jours
+    6. Affichage de date valide ou non
+ */
+
+const year = parseInt(prompt("Entrez l'année"));
+const month = parseInt(prompt("Entrez le mois"));
+const day = parseInt(prompt("Entrez le jour"));
+let maxDay = 31;
+let isBissextile;
+let isValid = false; // Inutile pour le moment
+
+// Condition du mois + année bissextile
+ if (month === 4 || month === 6 || month === 9 || month === 11 ){
+     maxDay = 30;
+ } else if (month === 2) {
+     maxDay = 28;
+     if ((year%4 === 0 && year%100 !== 0) || year%400 === 0){
+         maxDay = 29;
+     }
+ }
+
+ // Vérifications
+if (day && month && year) {
+    if (day > 0 && month > 0 && year > 0) {
+        if (month <= 12){
+            if (day <= maxDay) {
+                console.log(`La date ${day}/${month}/${year} est valide`)
+            } else {
+                console.log(`Le jour doit être inférieur ou égal à ${maxDay}`)
+            }
+        } else {
+            console.log("Le mois doit être inférieur à 12")
+        }
+    } else {
+        console.log("Entrez un nombre positif");
+    }
+} else {
+    console.log("Entrez un nombre");
+}

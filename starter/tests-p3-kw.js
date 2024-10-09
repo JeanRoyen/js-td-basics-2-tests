@@ -39,4 +39,4 @@ if (userKW <= 30) {
     console.log(cost = userKW*0.15)
 } else {
     console.log(cost = userKW*0.15)
-}
+}„
